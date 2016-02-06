@@ -1,18 +1,35 @@
 # coding: UTF-8
-
-summ = [[ "John", "22" ], [ "Sam", "34" ]]
-
-index = 0
-summ.each do |param|
-  index += 1
-  puts "#{index}. #{param[0]}, #{param[1]}"
+def print_base(base)
+  index = 0
+  base.each do |param|
+    index += 1
+    puts "#{index}. #{param[0]}, #{param[1]}"
+  end
 end
 
-#puts summ.delete_at 1[0]
-#puts summ.delete_at 2[1]
+i = 0
 
-summ.each do |elem|
-  puts elem
+summ = []
+name = []
+age = []
+
+
+loop do
+
+  puts "Введите имя игрока:"
+  name << gets.strip.capitalize
+  puts "Введите возраст игрока:"
+  age << gets.strip
+  summ << name
+  summ << age
+  print_base(summ)
+  puts "Продолжить? Нажмите ENTER."
+  status = gets.strip.to_s
+  exit if status == 'q'
+ i+=1
+
+  puts i
 end
 
-puts 'Имя засранца: ' + summ[1][0]
+print_base(summ)
+#puts 'Имя засранца: ' + summ[1][0]
