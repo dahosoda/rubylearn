@@ -15,4 +15,4 @@ summ.each do |elem|
   puts elem
 end
 
-puts summ(1[0])
+puts 'Имя засранца: ' + summ[1][0]
